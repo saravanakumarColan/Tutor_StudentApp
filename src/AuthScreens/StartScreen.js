@@ -9,7 +9,9 @@ import {
 import Button from "../Components/Button";
 import { icons } from "../Assets/icons";
 import InputText from "../Components/InputText";
-function StartScreen() {
+import { StackActions, useTheme } from "@react-navigation/native";
+
+function StartScreen(props) {
   
 
   
@@ -35,7 +37,7 @@ function StartScreen() {
       
       
 
-      <Button  name="Sign up"/>
+      <Button onPress={() =>props.navigation.dispatch(StackActions.replace("BottomTab"))}  name="Sign up"/>
     </HomeContainer>
   );
 }
