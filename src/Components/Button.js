@@ -12,7 +12,11 @@ function Button(props) {
     <View style={{ flex: 1, flexDirection: "row" }}>
       <View style={{ flex: 0.1 }} />
       <Pressable
+<<<<<<< HEAD
         onPress={() => onPress()}
+=======
+        onPress={onPress}
+>>>>>>> f222400527980473417cb7af753921b9ca180731
         style={{
           flex: 0.8,
           flexDirection: "row",

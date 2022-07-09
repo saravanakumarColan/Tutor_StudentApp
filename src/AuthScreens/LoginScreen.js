@@ -98,7 +98,7 @@ function LoginScreen(props) {
 
       <View style={{ height: View_Spacing.VS_W9 }} />
 
-      <Button />
+      <Button name={"LOGIN"} />
     </HomeComtainer>
   );
 }
