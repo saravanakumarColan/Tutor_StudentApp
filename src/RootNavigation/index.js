@@ -13,12 +13,12 @@ import { CustomTab } from '../Utils/CustomTab';
 
 import SideMenu from '../Utils/Sidemenu';
 // import InitialScreen from '../Screens/AuthScreens/InitialLoadingScreen';
-import InitialScreen from '../AuthScreens/InitialLoadingScreen';
-import StartScreen from '../AuthScreens/StartScreen';
-import LoginScreen from '../AuthScreens/LoginScreen';
-import SignupScreen from '../AuthScreens/SignupScreen';
-import HomeScreen from '../HomeScreens/HomeScreen';
-import FindTutorScreen from '../FindTutorScreens/FindTutorScreen';
+import InitialScreen from '../Screens/AuthScreens/InitialLoadingScreen';
+import StartScreen from '../Screens/AuthScreens/StartScreen';
+import LoginScreen from '../Screens/AuthScreens/LoginScreen';
+import SignupScreen from '../Screens/AuthScreens/SignupScreen';
+import HomeScreen from '../Screens/HomeScreens/HomeScreen';
+import FindTutorScreen from '../Screens/FindTutorScreens/FindTutorScreen';
 
 
 // Before rendering any navigation stack

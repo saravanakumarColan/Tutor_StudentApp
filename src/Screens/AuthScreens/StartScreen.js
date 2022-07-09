@@ -1,14 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import HomeContainer from "../Components/HomeContainer";
+import HomeContainer from "../../Components/HomeContainer";
 import {
   View_Spacing,
   fontSize,
   LG_BG_THEME,
-} from "../Assets/Constant/fontsAndColors";
-import Button from "../Components/Button";
-import { icons } from "../Assets/icons";
-import InputText from "../Components/InputText";
+} from "../../Assets/Constant/fontsAndColors";
+import Button from "../../Components/Button";
+
 import { StackActions, useTheme } from "@react-navigation/native";
 
 function StartScreen(props) {

@@ -12,11 +12,11 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { useTheme, useIsFocused } from "@react-navigation/native";
-import InputText from "../Components/InputText";
-import HomeComtainer from "../Components/HomeContainer";
-import { View_Spacing, fontSize,LG_BG_THEME } from "../Assets/Constant/fontsAndColors";
-import Button from "../Components/Button";
-import { icons } from "../Assets/icons";
+import InputText from "../../Components/InputText";
+import HomeComtainer from "../../Components/HomeContainer";
+import { View_Spacing, fontSize,LG_BG_THEME } from "../../Assets/Constant/fontsAndColors";
+import Button from "../../Components/Button";
+import { icons } from "../../Assets/icons";
 
 function LoginScreen(props) {
   const { colors } = useTheme();

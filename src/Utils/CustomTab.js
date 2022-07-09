@@ -6,8 +6,8 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 // import FastImage from 'react-native-fast-image';
 
 import {My_Home_Tab, My_club_Tab} from '../RootNavigation'
-import ChatScreen from '../ChatScreens/ChatScreen';
-import ProfileScreen from '../ProfileScreens/ProfileScreen';
+import ChatScreen from '../Screens/ChatScreens/ChatScreen';
+import ProfileScreen from '../Screens/ProfileScreens/ProfileScreen';
 const Tab = createBottomTabNavigator();
 // import ProfileScreen from "../Screens/ProfileScreen";
 export const CustomTab = () => {

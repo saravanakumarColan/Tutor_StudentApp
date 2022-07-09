@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
-import ActivityLoading from '../Components/ActivityLoading';
+import ActivityLoading from '../../Components/ActivityLoading';
 import {StackActions} from '@react-navigation/native';
 // import {Icon} from '../../Components/Icon';
 import SplashScreen from 'react-native-splash-screen';
