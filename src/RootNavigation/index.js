@@ -14,7 +14,10 @@ import { enableScreens } from 'react-native-screens';
 // import SideMenu from '../Utils/Sidemenu';
 // import InitialScreen from '../Screens/AuthScreens/InitialLoadingScreen';
 
+import StartScreen from '../AuthScreens/StartScreen';
 import LoginScreen from '../AuthScreens/LoginScreen';
+import SignupScreen from '../AuthScreens/SignupScreen';
+
 // Before rendering any navigation stack
 
 const Stack = createStackNavigator();
@@ -38,6 +41,8 @@ export default function App() {
 
 
   const beforeLoggedIn = {
+    StartScreen:StartScreen,
+    SignupScreen:SignupScreen,
     LoginScreen: LoginScreen,
    
   };
