@@ -7,12 +7,12 @@ import {
 } from "../Assets/Constant/fontsAndColors";
 import LinearGradient from "react-native-linear-gradient";
 function Button(props) {
-  const{name}=props
+  const{name,onPress}=props
   return (
     <View style={{ flex: 1, flexDirection: "row" }}>
       <View style={{ flex: 0.1 }} />
       <Pressable
-        onPress={() => alert("press")}
+        onPress={onPress}
         style={{
           flex: 0.8,
           flexDirection: "row",

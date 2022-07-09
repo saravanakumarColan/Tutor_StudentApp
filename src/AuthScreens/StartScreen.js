@@ -9,7 +9,7 @@ import {
 import Button from "../Components/Button";
 import { icons } from "../Assets/icons";
 import InputText from "../Components/InputText";
-function StartScreen() {
+function StartScreen(props) {
   
 
   
@@ -19,7 +19,7 @@ function StartScreen() {
 
       <View style={{ height: View_Spacing.VS_W20, backgroundColor: "red" }} />
       {/* Label */}
-
+<View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
       <Text
           style={{
             fontSize: fontSize.ExtraLarge,
@@ -29,13 +29,47 @@ function StartScreen() {
           {"Let's get Started"}
         </Text>
 
+        </View>
+
+      
+        <View style={{ height: View_Spacing.VS_W4 }} />
       
 
-      {/* Textinput */}
-      
-      
-
-      <Button  name="Sign up"/>
+      <Button onPress={()=>props.navigation.navigate("SignupScreen")} name="Sign up"/>
+      <View style={{ height: View_Spacing.VS_W4 }} />
+      <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+      <TouchableOpacity onPress={()=>props.navigation.navigate("LoginScreen")}>
+      <Text style={{
+            fontSize: fontSize.Medium,
+           color:'#9b9a9a'
+          }}>{"I already have an account"}
+      <Text
+          style={{
+            fontSize: fontSize.Medium,
+            color: LG_BG_THEME.App_Text_Blue,
+          }}
+        >
+         {" "} {"Sign in"}
+        </Text></Text>
+        </TouchableOpacity >
+        <View style={{ height: View_Spacing.VS_W10 }} />
+        <Text style={{
+            fontSize: fontSize.Medium,
+           color:'#9b9a9a'
+          }}>{"By signing up,  you agree to the"}
+      </Text>
+      <Text
+          style={{
+            fontSize: fontSize.Medium,
+            color: LG_BG_THEME.App_Text_Blue,
+          }}
+        >
+         {"Terms of Services"} <Text style={{
+            fontSize: fontSize.Large_50,
+            color: '#9b9a9a',
+          }}>and</Text> {"Privacy Policy"}
+        </Text>
+        </View>
     </HomeContainer>
   );
 }
