@@ -14,10 +14,14 @@ import React, { useState } from "react";
 import { useTheme, useIsFocused } from "@react-navigation/native";
 import InputText from "../../Components/InputText";
 import HomeComtainer from "../../Components/HomeContainer";
-import { View_Spacing, fontSize,LG_BG_THEME } from "../../Assets/Constant/fontsAndColors";
 import Button from "../../Components/Button";
 import { icons } from "../../Assets/icons";
-
+import { StackActions } from "@react-navigation/native";
+import {
+  View_Spacing,
+  fontSize,
+  LG_BG_THEME,
+} from "../../Assets/Constant/fontsAndColors";
 function LoginScreen(props) {
   const { colors } = useTheme();
   const [isSignUp, setIsSignUp] = useState(false);
@@ -98,7 +102,7 @@ function LoginScreen(props) {
 
       <View style={{ height: View_Spacing.VS_W9 }} />
 
-      <Button name={"LOGIN"} />
+      <Button onPress={()=>{props.navigation.dispatch(StackActions.replace("BottomTab"))}} name={"LOGIN"} />
     </HomeComtainer>
   );
 }

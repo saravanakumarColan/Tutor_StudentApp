@@ -24,6 +24,7 @@ export const CustomTab = () => {
           position: 'absolute',
           borderTopWidth: 1,
           
+          
         },
       }}
       initialRouteName="Home">
