@@ -18,6 +18,8 @@ import { View_Spacing, fontSize,LG_BG_THEME } from "../../Assets/Constant/fontsA
 import Button from "../../Components/Button";
 import { icons } from "../../Assets/icons";
 
+import { StackActions,} from "@react-navigation/native";
+
 function LoginScreen(props) {
   const { colors } = useTheme();
   const [isSignUp, setIsSignUp] = useState(false);
@@ -98,7 +100,14 @@ function LoginScreen(props) {
 
       <View style={{ height: View_Spacing.VS_W9 }} />
 
-      <Button name={"LOGIN"} />
+      <Button
+       textStyle={{
+                color: "#ffffff",
+                fontSize: fontSize.Large,
+                letterSpacing: 2,
+       } } 
+       onPress={()=>props.navigation.dispatch(StackActions.replace("BottomTab"))}
+       name={"LOGIN"} />
     </HomeComtainer>
   );
 }

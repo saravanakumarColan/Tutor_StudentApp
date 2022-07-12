@@ -9,6 +9,7 @@ import {
 import Button from "../../Components/Button";
 import { icons } from "../../Assets/icons";
 import InputText from "../../Components/InputText";
+
 function SignupScreen() {
   const [reg_Details, setRegister] = React.useState({
     firstname: "",
@@ -62,7 +63,11 @@ function SignupScreen() {
 
       <View style={{ height: View_Spacing.VS_W3 }} />
 
-      <Button  name="SUBMIT"/>
+      <Button textStyle={{
+                color: "#ffffff",
+                fontSize: fontSize.Large,
+                letterSpacing: 2,
+       } } name="SUBMIT"/>
     </HomeContainer>
   );
 }

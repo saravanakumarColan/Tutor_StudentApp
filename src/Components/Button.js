@@ -7,7 +7,7 @@ import {
 } from "../Assets/Constant/fontsAndColors";
 import LinearGradient from "react-native-linear-gradient";
 function Button(props) {
-  const{name,onPress}=props
+  const{name,onPress,textStyle}=props
   return (
     <View style={{ flex: 1, flexDirection: "row" }}>
       <View style={{ flex: 0.1 }} />
@@ -34,11 +34,7 @@ function Button(props) {
             style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
           >
             <Text
-              style={{
-                color: "#ffffff",
-                fontSize: fontSize.Large,
-                letterSpacing: 2,
-              }}
+              style={textStyle}
             >
               {name}
             </Text>

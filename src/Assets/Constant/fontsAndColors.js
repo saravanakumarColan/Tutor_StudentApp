@@ -46,7 +46,7 @@ const LG_BG_THEME = {
     
 
     App_Inactive:"#E8E8E8",
-
+App_Border:"#199ECF",
 
     App_Statusbar:"#14285a",
     App_Theme_Blue:"#264496",
@@ -88,7 +88,8 @@ const Basic_Viewdimension = {
     VD_TextInput: height / 100 * 6.5,
     VD_letterSpacing: width / 100 * 0.2,
     VD_letterSpacing_2: width / 100 * 0.1,
-
+Img_height:height/100*1.5,
+Img_width:height/100*1.5,
     Header_Radius:width / 100 * 5,
     //VD_ButtonRadius: width / 100 * 10,
 
