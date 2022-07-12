@@ -18,6 +18,7 @@ import Button from "../../Components/Button";
 import { icons } from "../../Assets/icons";
 
 import { StackActions,} from "@react-navigation/native";
+import { View_Spacing,fontSize,LG_BG_THEME } from "../../Assets/Constant/fontsAndColors";
 
 function LoginScreen(props) {
   const { colors } = useTheme();

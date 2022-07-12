@@ -5,10 +5,13 @@ import LinearGradient from 'react-native-linear-gradient';
 import HomeContainer from '../../Components/HomeContainer';
 import NewSessionScreen from './Session/NewSessionScreen';
 import { View_Spacing ,Basic_Viewdimension,LG_BG_THEME, fontSize} from '../../Assets/Constant/fontsAndColors';
+import Header from '../../Components/Header';
+
 View_Spacing
 function FindTutorScreen() {
   return (
   <HomeContainer>
+     <Header />
      <View style={{height:View_Spacing.VS_W5}} />
     <View style={{flex:0.1,flexDirection:'row'}}>
       <View style={{flex:0.3,paddingLeft:5}}>

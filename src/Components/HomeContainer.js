@@ -5,7 +5,7 @@ KeyboardAwareScrollView
 function HomeContainer(props) {
   return (
   <View style={{flex:1}}>
-    <KeyboardAwareScrollView>
+    <KeyboardAwareScrollView >
     {props.children}
     </KeyboardAwareScrollView>
   </View>
