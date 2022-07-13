@@ -223,7 +223,7 @@ const SideMenu = props => {
                     }}
                   />
                 )}
-                title="Home"
+                title="My Account"
                 titleStyle={{
                   color: '#000',
                   fontWeigt: '400',
@@ -243,199 +243,14 @@ const SideMenu = props => {
                         lineHeight: 15,
                       }}>
                       {/* Access to */}
-                      My schedule & clubs
+                      My Account & Details
                     </Text>
                   </View>
                 )}
               />
               <Divider style={{}} />
 
-              <List.Item
-                onPress={() => props.navigation.navigate('NotificationScreen')}
-                left={() => (
-                  // <MaterialCommunityIcons
-                  //   name="home"
-                  //   color={"#000"}
-                  //   size={24}
-                  //   style={{ alignSelf: "center", paddingHorizontal: 5 }}
-                  // />
-                  <View
-                    style={{
-                      borderwidth: 0.2,
-                      height: 36,
-                      width: 36,
-                      borderRadius: 18,
-                      backgroundColor: 'rgba(242, 242, 247, 255)',
-                      alignSelf: 'center',
-                      justifyContent: 'center',
-                      marginRight: 3,
-                    }}>
-                    <Image
-                      source={require('../Assets/icons/Auth/profile.png')}
-                      tintColor={'#147AD6'}
-                      style={{
-                        height: 18,
-                        width: 18,
-                        // borderRadius: 30,
-                        // marginTop: 15,
-                        marginHorizontal: 5,
-                        alignSelf: 'center',
-                      }}
-                    />
-                  </View>
-                )}
-                right={props => <List.Icon {...props} icon="chevron-right" />}
-                title="Notifications"
-                titleStyle={{
-                  color: '#000',
-                  fontWeigt: '400',
-                  fontFamily: 'Poppins-Medium',
-                  fontSize: 13,
-                  lineHeight: 18,
-                }}
-                description={({}) => (
-                  <View>
-                    <Text
-                      numberOfLines={1}
-                      style={{
-                        color: 'rgb(72,72,74)',
-                        fontWeigt: '300',
-                        fontFamily: 'Poppins-Regular',
-                        fontSize: 10,
-                        lineHeight: 15,
-                      }}>
-                      {/* Access */}
-                      My notifications & setttings
-                    </Text>
-                  </View>
-                )}
-              />
-              <Divider style={{}} />
-              {emailLogin ? (
-                <List.Item
-                  onPress={() =>
-                    forgotPassword(
-                      'Email address'
-                    )
-                  }
-                  left={() => (
-                    // <MaterialCommunityIcons
-                    //   name="home"
-                    //   color={"#000"}
-                    //   size={24}
-                    //   style={{ alignSelf: "center", paddingHorizontal: 5 }}
-                    // />
-                    <View
-                      style={{
-                        borderwidth: 0.2,
-                        height: 36,
-                        width: 36,
-                        borderRadius: 18,
-                        backgroundColor: 'rgba(242, 242, 247, 255)',
-                        alignSelf: 'center',
-                        justifyContent: 'center',
-                        marginRight: 3,
-                      }}>
-                      <Image
-                      source={require('../Assets/icons/Auth/profile.png')}
-                        tintColor={'#147AD6'}
-                        style={{
-                          height: 18,
-                          width: 18,
-                          // borderRadius: 30,
-                          // marginTop: 15,
-                          marginHorizontal: 5,
-                          alignSelf: 'center',
-                        }}
-                      />
-                    </View>
-                  )}
-                  right={props => <List.Icon {...props} icon="chevron-right" />}
-                  title="Change password"
-                  titleStyle={{
-                    color: '#000',
-                    fontWeigt: '400',
-                    fontFamily: 'Poppins-Medium',
-                    fontSize: 13,
-                    lineHeight: 18,
-                  }}
-                  description={({}) => (
-                    <View style={[styles.container, styles.column]}>
-                      <Text
-                        numberOfLines={1}
-                        style={{
-                          color: 'rgb(72,72,74)',
-                          fontWeigt: '300',
-                          fontFamily: 'Poppins-Regular',
-                          fontSize: 10,
-                          lineHeight: 15,
-                        }}>
-                        Change my password
-                      </Text>
-                    </View>
-                  )}
-                />
-              ) : null}
-              {emailLogin ? <Divider style={{}} /> : null}
-              <List.Item
-                onPress={() => {
-                  //setPrivacyPolicy(!privacyPolicy)
-                  Linking.openURL(
-                    'https://www.facebook.com/groups/kridasportcommunitysupport',
-                  ).catch(err => console.error('An error occurred', err));
-                }}
-                left={() => (
-                  <View
-                    style={{
-                      borderwidth: 0.2,
-                      height: 36,
-                      width: 36,
-                      borderRadius: 18,
-                      backgroundColor: 'rgba(242, 242, 247, 255)',
-                      alignSelf: 'center',
-                      justifyContent: 'center',
-                      marginRight: 3,
-                    }}>
-                    <Image
-                      source={require('../Assets/icons/Auth/profile.png')}
-                      tintColor={'#147AD6'}
-                      style={{
-                        height: 18,
-                        width: 18,
-                        // borderRadius: 30,
-                        // marginTop: 15,
-                        marginHorizontal: 5,
-                        alignSelf: 'center',
-                      }}
-                    />
-                  </View>
-                )}
-                right={props => <List.Icon {...props} icon="chevron-right" />}
-                title="Community support"
-                titleStyle={{
-                  color: '#000',
-                  fontWeigt: '400',
-                  fontFamily: 'Poppins-Medium',
-                  fontSize: 13,
-                  lineHeight: 18,
-                }}
-                description={({}) => (
-                  <View style={[styles.container, styles.column]}>
-                    <Text
-                      numberOfLines={1}
-                      style={{
-                        color: 'rgb(72,72,74)',
-                        fontWeigt: '300',
-                        fontFamily: 'Poppins-Regular',
-                        fontSize: 10,
-                        lineHeight: 15,
-                      }}>
-                      Join community support group
-                    </Text>
-                  </View>
-                )}
-              />
-              <Divider style={{}} />
+           
               <List.Item
                 onPress={() => {
                   //setPrivacyPolicy(!privacyPolicy)
@@ -472,7 +287,7 @@ const SideMenu = props => {
                   </View>
                 )}
                 right={props => <List.Icon {...props} icon="chevron-right" />}
-                title="How-to guides"
+                title="Payments"
                 titleStyle={{
                   color: '#000',
                   fontWeigt: '400',
@@ -491,115 +306,12 @@ const SideMenu = props => {
                         fontSize: 10,
                         lineHeight: 15,
                       }}>
-                      Guidance on app usage{' '}
+                      Payment setup and manage{' '}
                     </Text>
                   </View>
                 )}
               />
-              <Divider style={{}} />
 
-              <List.Item
-                onPress={() => {
-                  //setPrivacyPolicy(!privacyPolicy)
-                  props.navigation.navigate('WebViewScreen', {
-                    WebViewLink: 'https://kridasport.com/known-issues/',
-                    isarticle: true,
-                    terms: ' ',
-                  });
-                }}
-                left={() => (
-                  <View
-                    style={{
-                      borderwidth: 0.2,
-                      height: 36,
-                      width: 36,
-                      borderRadius: 18,
-                      backgroundColor: 'rgba(242, 242, 247, 255)',
-                      alignSelf: 'center',
-                      justifyContent: 'center',
-                      marginRight: 3,
-                    }}>
-                    <Image
-                      source={require('../Assets/icons/Auth/profile.png')}
-                      tintColor={'#147AD6'}
-                      style={{
-                        height: 18,
-                        width: 18,
-                        // borderRadius: 30,
-                        // marginTop: 15,
-                        marginHorizontal: 5,
-                        alignSelf: 'center',
-                      }}
-                    />
-                  </View>
-                )}
-                right={props => <List.Icon {...props} icon="chevron-right" />}
-                title="Known issues"
-                titleStyle={{
-                  color: '#000',
-                  fontWeigt: '400',
-                  fontFamily: 'Poppins-Medium',
-                  fontSize: 13,
-                  lineHeight: 18,
-                }}
-                description={({}) => (
-                  <View style={[styles.container, styles.column]}>
-                    <Text
-                      numberOfLines={1}
-                      style={{
-                        color: 'rgb(72,72,74)',
-                        fontWeigt: '300',
-                        fontFamily: 'Poppins-Regular',
-                        fontSize: 10,
-                        lineHeight: 15,
-                      }}>
-                      Application issues & fixes
-                    </Text>
-                  </View>
-                )}
-              />
-              {appleLogin && <Divider style={{}} />}
-
-              {appleLogin && (
-                <List.Item
-                  onPress={disabled ? () => _AppleAccountDelete() : null}
-                  left={() => (
-                    <Image
-                    source={require('../Assets/icons/Auth/profile.png')}
-                      style={{
-                        height: 30,
-                        width: 30,
-                        // borderRadius: 30,
-                        marginTop: 15,
-                        marginHorizontal: 5,
-                      }}
-                    />
-                  )}
-                  right={props => <List.Icon {...props} icon="chevron-right" />}
-                  title="Delete Account"
-                  titleStyle={{
-                    color: '#000',
-                    fontWeigt: '400',
-                    fontFamily: 'Poppins-Medium',
-                    fontSize: 13,
-                  }}
-                  description={({}) => (
-                    <View style={[styles.container, styles.column]}>
-                      <Text
-                        numberOfLines={1}
-                        style={{
-                          color: 'rgb(72,72,74)',
-                          fontWeigt: '300',
-                          fontFamily: 'Poppins-Regular',
-                          fontSize: 10,
-                          lineHeight: 15,
-                        }}>
-                        Delete my account from Krida
-                      </Text>
-                    </View>
-                  )}
-                />
-              )}
 
               <Divider style={{}} />
               <List.Item
@@ -687,7 +399,7 @@ const SideMenu = props => {
                 </View>
               )}
               right={props => <List.Icon {...props} icon="chevron-right" />}
-              title="Remove my account"
+              title="Support"
               titleStyle={{
                 color: '#000',
                 fontWeigt: '400',
@@ -706,7 +418,7 @@ const SideMenu = props => {
                       fontSize: 10,
                       lineHeight: 15,
                     }}>
-                    Goodbye to the Krida app{' '}
+                    Support and contact us{' '}
                   </Text>
                 </View>
               )}

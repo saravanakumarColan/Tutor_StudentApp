@@ -19,6 +19,7 @@ import LoginScreen from '../Screens/AuthScreens/LoginScreen';
 import SignupScreen from '../Screens/AuthScreens/SignupScreen';
 import HomeScreen from '../Screens/HomeScreens/HomeScreen';
 import FindTutorScreen from '../Screens/FindTutorScreens/FindTutorScreen';
+import TutorResultScreen from '../Screens/FindTutorScreens/TutorResultScreen';
 
 
 // Before rendering any navigation stack
@@ -52,7 +53,7 @@ export default function App() {
     MyTabs: CustomTab,
   };
   const tabsInner = {
-    
+    TutorResultScreen : TutorResultScreen
   };
   function AuthStack() {
     return (
@@ -114,9 +115,17 @@ const My_Home_Tab = () => {
 export { My_Home_Tab };
 
 const My_club_Tab = () => {
+  const tabsInner = {
+    TutorResultScreen : TutorResultScreen
+  };
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="FindTutorScreen" component={FindTutorScreen} />
+      {Object.entries({
+          ...tabsInner,
+        }).map(([name, component]) => (
+          <Stack.Screen key={name} name={name} component={component} />
+        ))}
     </Stack.Navigator>
   );
 };

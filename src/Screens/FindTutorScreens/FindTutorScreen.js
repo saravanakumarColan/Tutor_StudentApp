@@ -8,10 +8,10 @@ import { View_Spacing ,Basic_Viewdimension,LG_BG_THEME, fontSize} from '../../As
 import Header from '../../Components/Header';
 
 View_Spacing
-function FindTutorScreen() {
+function FindTutorScreen(props) {
   return (
   <HomeContainer>
-     <Header />
+      <Header {...props}/>
      <View style={{height:View_Spacing.VS_W5}} />
     <View style={{flex:0.1,flexDirection:'row'}}>
       <View style={{flex:0.3,paddingLeft:5}}>
@@ -91,7 +91,7 @@ function FindTutorScreen() {
       
     </View>
     
-    <NewSessionScreen />
+    <NewSessionScreen {...props} />
   </HomeContainer>
   )
 }

@@ -10,7 +10,7 @@ import RoundButton from "../../Components/RoundButton";
 import Icon from "react-native-vector-icons/AntDesign";
 import {List, Chip,Divider} from 'react-native-paper';
 
-function HomeScreen(props) {
+function TutorResultScreen(props) {
   return (
     <View style={styles.Container}>
       <Header {...props}/>
@@ -152,4 +152,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default TutorResultScreen;

@@ -3,9 +3,9 @@ import { Dimensions, StyleSheet, Platform } from 'react-native'
 const { width, height } = Dimensions.get("window");
 
 const fontFamily = {
-    // Roboto_Regular: "Roboto-Regular",
-    // Roboto_Medium: "Roboto-Medium",
-    // Roboto_Bold: "Roboto-Bold",
+    Roboto_Regular: "Poppins-Regular",
+    Poppins_Medium: "Poppins-Medium",
+    Poppins_Bold: "Roboto-SemiBold",
 
    
 }

@@ -1,15 +1,18 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 
-function Header() {
+function Header(props) {
   return (
     <View style={styles.container}>
+      <TouchableOpacity onPress={()=>{props.navigation.openDrawer()}}>
       <Image
         source={require("../Assets/icons/Auth/profile.png")}
         tintColor={"#147AD6"}
         style={styles.imageStyle     
         }
       />
+      </TouchableOpacity>
+  
            <Image
         source={require("../Assets/icons/Auth/profile.png")}
         tintColor={"#147AD6"}

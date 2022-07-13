@@ -15,9 +15,10 @@ import {
   fontSize,
 } from "../../../Assets/Constant/fontsAndColors";
 import LinearGradient from "react-native-linear-gradient";
+import finalPropsSelectorFactory from "react-redux/es/connect/selectorFactory";
 
 LinearGradient
-function NewSessionScreen() {
+function NewSessionScreen(props) {
   return (
     <>
       <View style={{ flex: 0.1, padding: 10 }}>
@@ -88,6 +89,8 @@ placeholder="Description" />
           }}
         >
           <TouchableOpacity
+                        onPress={() => props.navigation.navigate('TutorResultScreen')}
+
             style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
           >
             <Text
