@@ -6,9 +6,9 @@ import HomeContainer from '../../Components/HomeContainer';
 import NewSessionScreen from './Session/NewSessionScreen';
 import { View_Spacing ,Basic_Viewdimension,LG_BG_THEME, fontSize} from '../../Assets/Constant/fontsAndColors';
 import Header from '../../Components/Header';
+import ActiveSessionScreen from './Session/ActiveSessionScreen';
 
-View_Spacing
-function FindTutorScreen() {
+function FindTutorScreen(props) {
   return (
   <HomeContainer>
      <Header />
@@ -40,19 +40,17 @@ function FindTutorScreen() {
         </View>
         <View style={{flex:0.05}} />
         <View style={{flex:0.3,paddingLeft:5}}>
-    <LinearGradient
-          colors={["#10719E", "#199ECF", "#20C6F9"]}
-          start={{ x: 0.1, y: 1 }}
-          end={{ x: 0.8, y: 0.9 }}
-          style={{
-            flex: 1,
-            flexDirection: "row",
-
-            height: View_Spacing.VS_W4,
-            borderRadius: Basic_Viewdimension.VD_BorderRadius,
-          }}
-        >
-          <View
+        <View
+              style={{
+                flex: 1,
+                flexDirection: "row",
+                borderWidth: 1,
+                borderColor: LG_BG_THEME.App_Border,
+                height: View_Spacing.VS_W4,
+                borderRadius: Basic_Viewdimension.VD_BorderRadius,
+              }}
+            >
+          <TouchableOpacity onPress={()=>props.navigation.navigate('ActiveSessionScreen')}
             style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
           >
             <Text
@@ -60,38 +58,36 @@ function FindTutorScreen() {
             >
            {"Active Session"}
             </Text>
-          </View>
-        </LinearGradient>
+          </TouchableOpacity>
+        </View>
         </View>
         <View style={{flex:0.05}} />
         <View style={{flex:0.3,paddingRight:5}}>
-    <LinearGradient
-          colors={["#10719E", "#199ECF", "#20C6F9"]}
-          start={{ x: 0.1, y: 1 }}
-          end={{ x: 0.8, y: 0.9 }}
-          style={{
-            flex: 1,
-            flexDirection: "row",
-
-            height: View_Spacing.VS_W4,
-            borderRadius: Basic_Viewdimension.VD_BorderRadius,
-          }}
-        >
+        <View
+              style={{
+                flex: 1,
+                flexDirection: "row",
+                borderWidth: 1,
+                borderColor: LG_BG_THEME.App_Border,
+                height: View_Spacing.VS_W4,
+                borderRadius: Basic_Viewdimension.VD_BorderRadius,
+              }}
+            >
           <View
             style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
           >
             <Text
-              style={{fontSize:fontSize.Small}} 
+              style={{fontSize:fontSize.Small,color:LG_BG_THEME.App_Text_Inactive}} 
             >
             {"Past Session"}
             </Text>
           </View>
-        </LinearGradient>
+        </View>
         </View>
       
     </View>
     
-    <NewSessionScreen />
+    <NewSessionScreen /> 
   </HomeContainer>
   )
 }
