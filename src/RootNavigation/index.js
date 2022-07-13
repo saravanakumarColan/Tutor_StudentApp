@@ -20,6 +20,7 @@ import SignupScreen from '../Screens/AuthScreens/SignupScreen';
 import HomeScreen from '../Screens/HomeScreens/HomeScreen';
 import FindTutorScreen from '../Screens/FindTutorScreens/FindTutorScreen';
 import TutorResultScreen from '../Screens/FindTutorScreens/TutorResultScreen';
+import ActiveSessionScreen from '../Screens/FindTutorScreens/Session/ActiveSessionScreen';
 
 
 // Before rendering any navigation stack

@@ -8,10 +8,6 @@ import { View_Spacing ,Basic_Viewdimension,LG_BG_THEME, fontSize} from '../../As
 import Header from '../../Components/Header';
 import ActiveSessionScreen from './Session/ActiveSessionScreen';
 
-<<<<<<< HEAD
-View_Spacing
-=======
->>>>>>> 75302e49e3e4d481047c254800788493768d9472
 function FindTutorScreen(props) {
   return (
   <HomeContainer>
