@@ -53,7 +53,9 @@ export default function App() {
     MyTabs: CustomTab,
   };
   const tabsInner = {
-    TutorResultScreen : TutorResultScreen
+    TutorResultScreen : TutorResultScreen,
+    ActiveSessionScreen:ActiveSessionScreen,
+    FindTutorScreen:FindTutorScreen
   };
   function AuthStack() {
     return (
