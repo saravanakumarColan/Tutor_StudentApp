@@ -9,6 +9,7 @@ import {
   Linking,
   TouchableOpacity,
   Dimensions,
+  Image
 } from 'react-native';
 import ActivityLoading from '../../Components/ActivityLoading';
 import {StackActions} from '@react-navigation/native';
@@ -47,8 +48,9 @@ function InitialLoadingScreen(props) {
   
   return (
     <View style={styles.contentContainStyle}>
+
       <View style={styles.imageContainer}>
-        <Text style={{color:'red'}}>InitialLoadingScreen</Text>
+        <Image source={require('../../Assets/icons/logo.png')} style={[styles.imageStyle]} />
       </View>
       <ActivityLoading />
  
@@ -66,7 +68,7 @@ const styles = StyleSheet.create({
     width: 155,
   },
   imageContainer: {
-    flex: 0.7,
+    flex: 0.9,
     justifyContent: 'center',
     alignItems: 'center',
   },

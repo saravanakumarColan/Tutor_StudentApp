@@ -21,6 +21,7 @@ import HomeScreen from '../Screens/HomeScreens/HomeScreen';
 import FindTutorScreen from '../Screens/FindTutorScreens/FindTutorScreen';
 import TutorResultScreen from '../Screens/FindTutorScreens/TutorResultScreen';
 import ActiveSessionScreen from '../Screens/FindTutorScreens/Session/ActiveSessionScreen';
+import NotificationList from '../Screens/NotificationScreen/NotificationList';
 
 
 // Before rendering any navigation stack
@@ -56,7 +57,8 @@ export default function App() {
   const tabsInner = {
     TutorResultScreen : TutorResultScreen,
     ActiveSessionScreen:ActiveSessionScreen,
-    FindTutorScreen:FindTutorScreen
+    FindTutorScreen:FindTutorScreen,
+    NotificationList:NotificationList
   };
   function AuthStack() {
     return (

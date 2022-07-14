@@ -7,7 +7,7 @@ export default ActivityLoading = () => {
 
   return (
     <View style={styles.container}>
-      <ActivityIndicator size="large" color={'red'} />
+      <ActivityIndicator size="large" color={'blue'} />
     </View>
   );
 };
