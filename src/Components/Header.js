@@ -1,9 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-
+import { View, Text, StyleSheet, TouchableOpacity, Image,Platform } from "react-native";
+import { Appbar } from 'react-native-paper';
+import {
+  View_Spacing,
+  fontSize,
+  LG_BG_THEME,
+} from "../Assets/Constant/fontsAndColors";
 function Header(props) {
+  let {title} = props
   return (
-    <View style={styles.container}>
+    <Appbar style={styles.container}>
       <TouchableOpacity onPress={()=>{props.navigation.openDrawer()}}>
       <Image
         source={require("../Assets/icons/Auth/profile.png")}
@@ -11,13 +17,14 @@ function Header(props) {
         style={styles.imageStyle}
       />
       </TouchableOpacity>
+      <Text style={styles.headerText}>{title}</Text>
   
            <Image
         source={require("../Assets/icons/Auth/profile.png")}
         tintColor={"#147AD6"}
         style={styles.imageStyle}
       />
-    </View>
+    </Appbar>
   );
 }
 const styles = StyleSheet.create({
@@ -26,6 +33,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffff",
     flexDirection: "row",
     justifyContent: "space-between",
+    borderColor:'grey',
+    borderBottomWidth:1,
+    marginBottom:5,
+    alignItems:'center'
+    
+    
   },
   imageStyle: {
     height: 25,
@@ -36,6 +49,11 @@ const styles = StyleSheet.create({
     flex: 0.1,
      justifyContent: "center",
       alignItems: "center" 
+    },
+    headerText:{
+      color: LG_BG_THEME.App_Text_Blue,
+      fontSize: fontSize.Medium,
+      marginTop: 5,
     },
 });
 

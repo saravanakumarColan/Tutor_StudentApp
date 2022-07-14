@@ -14,8 +14,11 @@ function HomeScreen(props) {
   return (
     <View style={styles.Container}>
       <Header {...props}/>
-      <View style={{ backgroundColor: "red" ,flex:0.4}} />
-
+      <Image
+          source={require("../../Assets/icons/teacher.jpg")}
+          style={{ width: "100%", height: 250 }}
+          resizeMode={"cover"}
+        />
       <TouchableOpacity
         style={{ backgroundColor: "#fff" }}
         onPress={() => props.navigation.navigate("MyProfile")}

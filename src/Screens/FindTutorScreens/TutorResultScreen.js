@@ -1,5 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Image,
+  FlatList,
+} from "react-native";
 import {
   View_Spacing,
   fontSize,
@@ -8,140 +15,203 @@ import {
 import Header from "../../Components/Header";
 import RoundButton from "../../Components/RoundButton";
 import Icon from "react-native-vector-icons/AntDesign";
-import {List, Chip,Divider} from 'react-native-paper';
+import { List, Chip, Divider } from "react-native-paper";
+import { ScrollView } from "react-native-gesture-handler";
+import LinearGradient from "react-native-linear-gradient";
 
 function TutorResultScreen(props) {
-  return (
-    <View style={styles.Container}>
-      <Header {...props}/>
-      <View style={{ backgroundColor: "red" ,flex:0.4}} />
-
-      <TouchableOpacity
-        style={{ backgroundColor: "#fff" }}
-        onPress={() => props.navigation.navigate("MyProfile")}
-      >
-        <View
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            paddingVertical: 10,
-          }}
-        >
-          <Image
-            source={{
-              uri: "https://ui-avatars.com/api/?length=1&background=2F79EB&color=fff&name=saravana",
-            }}
-            style={{
-              width: 80,
-              height: 80,
-              borderRadius: 50,
-              right: 2,
-            }}
-          />
-
-          <View style={{ flexDirection: "column", justifyContent: "center" }}>
-            <Text
-              style={{
-                color: LG_BG_THEME.App_Text_Blue,
-                fontSize: 16,
-                textAlign: "left",
-                fontFamily: "Poppins-SemiBold",
-                lineHeight: 20,
-                paddingTop: 5,
-              }}
-            >
-              {"Full name"}
-            </Text>
-          </View>
-        </View>
-      </TouchableOpacity>
-      <Divider/>
-      <View style={{ flexDirection:'row',flex:0.3}}>
-        <View
-          style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-        >
-          <Text
-            style={{
-              color: LG_BG_THEME.App_Text_Blue,
-              fontSize: fontSize.Medium,
-              marginTop: 5,
-            }}
-          >
-            {"Promos"}
-          </Text>
-          <Icon name={"check"} size={22} color={LG_BG_THEME.App_RED_1} />
-        </View>
-        <View
-          style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-        >
-          <Text
-            style={{
-              color: LG_BG_THEME.App_Text_Blue,
-              fontSize: fontSize.Medium,
-              marginTop: 5,
-            }}
-          >
-            {"Giveaways"}
-          </Text>
-          <Icon name={"check"} size={22} color={LG_BG_THEME.App_RED_1} />
-        </View>
-        <View
-          style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-        >
-          <Text
-            style={{
-              color: LG_BG_THEME.App_Text_Blue,
-              fontSize: fontSize.Medium,
-              marginTop: 5,
-            }}
-          >
-            {"FAQ'S"}
-          </Text>
-          <Icon name={"check"} size={22} color={LG_BG_THEME.App_RED_1} />
-        </View>
-      </View>
+  const DATA = [
+    {
+      id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
+      title: "First Item",
+    },
+    {
+      id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+      title: "Second Item",
+    },
+    {
+      id: "58694a0f-3da1-471f-bd96-145571e29d72",
+      title: "Third Item",
+    },
+    {
+      id: "58694a0f-3da1-471f-bd96-145571e29d72",
+      title: "Third Item",
+    },
+  ];
+  const renderItem = ({ item }) => (
+    <View
+      style={{
+        justifyContent: "center",
+        alignItems: "center",
+        paddingHorizontal: 10,
+      }}
+    >
+      <Image
+        source={{
+          uri: "https://ui-avatars.com/api/?length=1&background=2F79EB&color=fff&name=saravana",
+        }}
+        style={{
+          width: 55,
+          height: 55,
+          borderRadius: 50,
+          top: 0,
+        }}
+      />
       <View
         style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "flex-end",
-          paddingHorizontal: 10,
+          //flexDirection: "row",
+          width: 150,
+          height: 150,
+          //borderRadius: cborderRadius,
         }}
       >
-        <RoundButton
-          buttonname={"Active Session"}
-          imagename={"check"}
-          cborderRadius={60 / 2}
-          cwidth={60}
-          cheight={60}
-          onPress={() => {
-            props.navigation.dispatch(StackActions.replace("BottomTab"));
+        <LinearGradient
+          colors={["#10719E", "#199ECF", "#20C6F9"]}
+          start={{ x: 0.1, y: 1 }}
+          end={{ x: 0.8, y: 0.9 }}
+          style={{
+            flex: 1,
           }}
-          name={"LOGIN"}
-        />
-        <RoundButton
-          buttonname={"New Session"}
-          imagename={"plus"}
-          cborderRadius={80 / 2}
-          cwidth={80}
-          cheight={80}
-          onPress={() => {
-            props.navigation.dispatch(StackActions.replace("BottomTab"));
-          }}
-          name={"LOGIN"}
-        />
-        <RoundButton
-          buttonname={"Past Session"}
-          imagename={"back"}
-          cborderRadius={60 / 2}
-          cwidth={60}
-          cheight={60}
-          onPress={() => {
-            props.navigation.dispatch(StackActions.replace("BottomTab"));
-          }}
-          name={"LOGIN"}
-        />
+        >
+          <View
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+              paddingVertical: 10,
+            }}
+          >
+            <View style={{ flexDirection: "column", justifyContent: "center" }}>
+              <Text
+                style={{
+                  color: "#fff",
+                  fontSize: 14,
+                  textAlign: "center",
+                  fontFamily: "Poppins-SemiBold",
+                  lineHeight: 20,
+                  paddingTop: 5,
+                }}
+              >
+                {"Full name"}
+              </Text>
+              <Text
+                style={{
+                  color: "#fff",
+                  fontSize: 14,
+                  textAlign: "center",
+                  fontFamily: "Poppins-Medium",
+                  paddingTop: 2,
+                }}
+              >
+                {"English"}
+              </Text>
+              <View
+                style={{ height: 0.5, backgroundColor: "#fff", width: 150 }}
+              />
+            </View>
+          </View>
+          <View style={{flex:1,flexDirection:'row'}}>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "row",
+            }}
+          >
+            <Icon name={"home"} size={22} color={LG_BG_THEME.WHITE_THEME} />
+            <Text
+              style={{
+                color: "#fff",
+                fontSize: fontSize.verySmall,
+                marginTop: 5,
+              }}
+            >
+              {"20"}
+            </Text>
+          </View>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "row",
+            }}
+          >
+            <Icon name={"home"} size={22} color={LG_BG_THEME.WHITE_THEME} />
+            <Text
+              style={{
+                color: "#fff",
+                fontSize: fontSize.verySmall,
+                marginTop: 5,
+              }}
+            >
+              {"20"}
+            </Text>
+          </View>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "row",
+            }}
+          >
+            <Icon name={"home"} size={22} color={LG_BG_THEME.WHITE_THEME} />
+            <Text
+              style={{
+                color: "#fff",
+                fontSize: fontSize.verySmall,
+                marginTop: 5,
+              }}
+            >
+              {"20"}
+            </Text>
+          </View>
+          </View>
+        </LinearGradient>
       </View>
+     
+    </View>
+  );
+  return (
+    <View style={styles.Container}>
+      <Header title={"Find a Tutor"} {...props} />
+      <ScrollView style={styles.Container}>
+        <Image
+          source={require("../../Assets/icons/teacher.jpg")}
+          style={{ width: "100%", height: 250 }}
+          resizeMode={"cover"}
+        />
+        <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
+          <View>
+            <Text style={styles.headerText}>{"Subject"}</Text>
+            <Text style={styles.SubText}>{"English"}</Text>
+          </View>
+          <View>
+            <Text style={styles.headerText}>{"Type of Work"}</Text>
+            <Text style={styles.SubText}>{"HomeWork"}</Text>
+          </View>
+        </View>
+        <View style={{ paddingHorizontal: 60, marginTop: 5 }}>
+          <Text style={styles.headerText}>{"Description"}</Text>
+          <Text style={styles.SubText}>
+            {
+              "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            }
+          </Text>
+        </View>
+
+        <View style={{ justifyContent: "center", alignItems: "center" }}>
+          <FlatList
+            data={DATA}
+            numColumns={2}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id}
+          />
+        </View>
+
+     
+      </ScrollView>
     </View>
   );
 }
@@ -149,6 +219,16 @@ const styles = StyleSheet.create({
   Container: {
     flex: 1,
     backgroundColor: "#ffff",
+  },
+  headerText: {
+    color: LG_BG_THEME.App_Text_Blue,
+    fontSize: fontSize.Medium,
+    marginTop: 5,
+  },
+  SubText: {
+    color: LG_BG_THEME.LIGHTGREY_THEME,
+    fontSize: fontSize.Small,
+    marginTop: 5,
   },
 });
 
