@@ -315,7 +315,7 @@ const SideMenu = props => {
 
               <Divider style={{}} />
               <List.Item
-                onPress={() => openSettings()}
+                onPress={() => props.navigation.navigate('SettingScreen')}
                 left={() => (
                   <View
                     style={{

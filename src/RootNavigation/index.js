@@ -22,6 +22,7 @@ import FindTutorScreen from '../Screens/FindTutorScreens/FindTutorScreen';
 import TutorResultScreen from '../Screens/FindTutorScreens/TutorResultScreen';
 import ActiveSessionScreen from '../Screens/FindTutorScreens/Session/ActiveSessionScreen';
 import NotificationList from '../Screens/NotificationScreen/NotificationList';
+import SettingScreen from '../Screens/NotificationScreen/SettingsScreen';
 
 
 // Before rendering any navigation stack
@@ -58,7 +59,8 @@ export default function App() {
     TutorResultScreen : TutorResultScreen,
     ActiveSessionScreen:ActiveSessionScreen,
     FindTutorScreen:FindTutorScreen,
-    NotificationList:NotificationList
+    NotificationList:NotificationList,
+    SettingScreen:SettingScreen
   };
   function AuthStack() {
     return (

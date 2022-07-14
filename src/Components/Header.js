@@ -14,16 +14,17 @@ import {
   LG_BG_THEME,
 } from "../Assets/Constant/fontsAndColors";
 function Header(props) {
-  let { title } = props;
+  let { title,back } = props;
   return (
     <Appbar style={styles.container}>
       <TouchableOpacity
         onPress={() => {
-          props.navigation.openDrawer();
+          back ? props.navigation.goBack(null) : props.navigation.openDrawer()
+
         }}
       >
         <Image
-          source={require("../Assets/icons/Auth/profile.png")}
+          source={back?require("../Assets/icons/back.png"):require("../Assets/icons/Auth/profile.png")}
           tintColor={"#147AD6"}
           style={styles.imageStyle}
         />
