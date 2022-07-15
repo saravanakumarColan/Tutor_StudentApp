@@ -63,7 +63,8 @@ function FindTutorScreen(props) {
         </View>
         <View style={{flex:0.05}} />
         <View style={{flex:0.3,paddingRight:5}}>
-        <View
+        <TouchableOpacity
+       onPress={() =>props.navigation.navigate('PastSessionScreen')}
               style={{
                 flex: 1,
                 flexDirection: "row",
@@ -82,7 +83,7 @@ function FindTutorScreen(props) {
             {"Past Session"}
             </Text>
           </View>
-        </View>
+        </TouchableOpacity>
         </View>
       
     </View>

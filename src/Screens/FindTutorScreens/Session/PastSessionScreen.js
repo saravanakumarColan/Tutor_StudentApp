@@ -1,24 +1,11 @@
-import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  TextInput,
-} from "react-native";
-
-import DropDown from "../../../Components/DropDown";
-import {
-  View_Spacing,
-  Basic_Viewdimension,
-  LG_BG_THEME,
-  fontSize,
-} from "../../../Assets/Constant/fontsAndColors";
-import LinearGradient from "react-native-linear-gradient";
-import SessionList from "../../../Components/SessionList";
-import HomeContainer from "../../../Components/HomeContainer";
-import Header from "../../../Components/Header";
-function ActiveSessionScreen(props) {
+import { StyleSheet, Text, View ,TouchableOpacity} from 'react-native'
+import React from 'react'
+import Header from '../../../Components/Header';
+import HomeContainer from '../../../Components/HomeContainer';
+import LinearGradient from 'react-native-linear-gradient';
+import { LG_BG_THEME,View_Spacing,Basic_Viewdimension,fontSize } from '../../../Assets/Constant/fontsAndColors';
+import SessionList from '../../../Components/SessionList';
+export default function PastSessionScreen(props) {
   return (
     <HomeContainer>
        <Header />
@@ -56,14 +43,12 @@ function ActiveSessionScreen(props) {
           </View>
           <View style={{ flex: 0.05 }} />
           <View style={{ flex: 0.3, paddingLeft: 5 }}>
-            <LinearGradient
-              colors={["#10719E", "#199ECF", "#20C6F9"]}
-              start={{ x: 0.1, y: 1 }}
-              end={{ x: 0.8, y: 0.9 }}
+            <View
               style={{
                 flex: 1,
                 flexDirection: "row",
-
+                borderWidth: 1,
+                borderColor: LG_BG_THEME.App_Border,
                 height: View_Spacing.VS_W4,
                 borderRadius: Basic_Viewdimension.VD_BorderRadius,
               }}
@@ -79,23 +64,24 @@ function ActiveSessionScreen(props) {
                 <Text
                   style={{
                     fontSize: fontSize.Small,
-                    color: LG_BG_THEME.WHITE_THEME,
+                    color: LG_BG_THEME.App_Text_Inactive,
                   }}
                 >
                   {"Active Session"}
                 </Text>
               </TouchableOpacity>
-            </LinearGradient>
+            </View>
           </View>
           <View style={{ flex: 0.05 }} />
           <View style={{ flex: 0.3, paddingRight: 5 }}>
-          <TouchableOpacity
-          onPress={() => props.navigation.navigate("PastSessionScreen")}
+          <LinearGradient
+              colors={["#10719E", "#199ECF", "#20C6F9"]}
+              start={{ x: 0.1, y: 1 }}
+              end={{ x: 0.8, y: 0.9 }}
               style={{
                 flex: 1,
                 flexDirection: "row",
-                borderWidth: 1,
-                borderColor: LG_BG_THEME.App_Border,
+
                 height: View_Spacing.VS_W4,
                 borderRadius: Basic_Viewdimension.VD_BorderRadius,
               }}
@@ -107,23 +93,25 @@ function ActiveSessionScreen(props) {
                   alignItems: "center",
                 }}
               >
-                <Text style={{ fontSize: fontSize.Small }}>
+                <Text style={{ fontSize: fontSize.Small, color: LG_BG_THEME.WHITE_THEME, }}>
                   {"Past Session"}
                 </Text>
               </View>
-            </TouchableOpacity>
+            </LinearGradient>
           </View>
         </View>
         <View style={{ height: View_Spacing.VS_W5 }} />
-        <SessionList />
+        <SessionList
+        Complete={true}
+         />
         <View style={{ height: View_Spacing.VS_W5 }} />
-        <SessionList />
-        <View style={{ height: View_Spacing.VS_W5 }} />
-        <SessionList />
-        <View style={{ height: View_Spacing.VS_W5 }} />
-        <SessionList />
-      </View>
-    </HomeContainer>
-  );
+        <SessionList
+        Complete={true}
+        tutor={true}
+         />
+        </View>
+        </HomeContainer>
+  )
 }
-export default ActiveSessionScreen;
+
+const styles = StyleSheet.create({})
