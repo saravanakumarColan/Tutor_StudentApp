@@ -54,6 +54,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     marginBottom: 5,
     alignItems: "center",
+    elevation:3,
+    paddingVertical:5
+    
   },
   imageStyle: {
     height: 25,

@@ -118,7 +118,7 @@ function HomeScreen(props) {
           cwidth={60}
           cheight={60}
           onPress={() => {
-            props.navigation.dispatch(StackActions.replace("BottomTab"));
+            props.navigation.navigate("ActiveSessionScreen");
           }}
           name={"LOGIN"}
         />
@@ -129,7 +129,7 @@ function HomeScreen(props) {
           cwidth={80}
           cheight={80}
           onPress={() => {
-            props.navigation.dispatch(StackActions.replace("BottomTab"));
+            props.navigation.navigate("FindTutorScreen");
           }}
           name={"LOGIN"}
         />
@@ -140,7 +140,7 @@ function HomeScreen(props) {
           cwidth={60}
           cheight={60}
           onPress={() => {
-            props.navigation.dispatch(StackActions.replace("BottomTab"));
+            props.navigation.navigate("PastSessionScreen");
           }}
           name={"LOGIN"}
         />

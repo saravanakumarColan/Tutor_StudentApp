@@ -147,7 +147,7 @@ export const CustomTab = () => {
         }}
       />
       <Tab.Screen
-        name="ProfileScreen"
+        name="My Profile"
         component={ProfileScreen}
         options={{
           headerShown: false,

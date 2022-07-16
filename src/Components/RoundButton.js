@@ -12,6 +12,7 @@ import Icon from "react-native-vector-icons/AntDesign";
 function RoundButton(props) {
   const { imagename, onPress, cwidth, cheight, cborderRadius, buttonname } = props;
   return (
+    <TouchableOpacity onPress={()=>{onPress()}}>
     <View style={{justifyContent:'center',alignItems:'center'}}>
       <View
         style={{
@@ -50,6 +51,7 @@ function RoundButton(props) {
         {buttonname}
       </Text>
     </View>
+    </TouchableOpacity>
   );
 }
 
