@@ -24,7 +24,7 @@ function Header(props) {
         }}
       >
         <Image
-          source={back?require("../Assets/icons/back.png"):require("../Assets/icons/Auth/profile.png")}
+          source={back?require("../Assets/icons/back.png"):require("../Assets/icons/menu.png")}
           tintColor={"#147AD6"}
           style={styles.imageStyle}
         />
@@ -36,7 +36,7 @@ function Header(props) {
         }}
       >
         <Image
-          source={require("../Assets/icons/Auth/profile.png")}
+          source={require("../Assets/icons/bell.png")}
           tintColor={"#147AD6"}
           style={styles.imageStyle}
         />

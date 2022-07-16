@@ -8,7 +8,7 @@ import SessionList from '../../../Components/SessionList';
 export default function PastSessionScreen(props) {
   return (
     <HomeContainer>
-       <Header />
+       <Header {...props} />
      <View style={{height:View_Spacing.VS_W5}} />
       <View style={{ padding: 8 }}>
         <View style={{ flex: 0.1, flexDirection: "row" }}>

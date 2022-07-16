@@ -9,4 +9,6 @@ export const icons = {
     backArrow:require("./backArrow.png"),
     star:require("./star.png"),
     add:require("./add.png"),
+    bell:require("./bell.png"),
+    menu:require("./menu.png")
 }
