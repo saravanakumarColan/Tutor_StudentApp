@@ -24,6 +24,7 @@ import ActiveSessionScreen from '../Screens/FindTutorScreens/Session/ActiveSessi
 import NotificationList from '../Screens/NotificationScreen/NotificationList';
 import SettingScreen from '../Screens/NotificationScreen/SettingsScreen';
 import PastSessionScreen from '../Screens/FindTutorScreens/Session/PastSessionScreen';
+import ComplaintsList from '../Screens/NotificationScreen/ComplaintsList';
 
 // Before rendering any navigation stack
 
@@ -62,6 +63,7 @@ export default function App() {
     NotificationList:NotificationList,
     SettingScreen:SettingScreen,
     PastSessionScreen:PastSessionScreen,
+    ComplaintsList:ComplaintsList
   };
   function AuthStack() {
     return (
@@ -125,6 +127,7 @@ export { My_Home_Tab };
 const My_club_Tab = () => {
   const tabsInner = {
     TutorResultScreen : TutorResultScreen
+    
   };
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>

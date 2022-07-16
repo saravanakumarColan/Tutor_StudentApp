@@ -37,7 +37,7 @@ const SideMenu = props => {
   const [disabled, setDisabled] = React.useState(true);
   const isFocused = useIsFocused();
   const editProfileResponse = useSelector(state => state?.EditProfileReducer);
-  const [appleLogin, setAppleLogin] = React.useState(false);
+  const [isSupportView, setIsSupportView] = React.useState(false);
 
   React.useEffect(() => {
 
@@ -371,7 +371,7 @@ const SideMenu = props => {
             <Divider style={{}} />
             <List.Item
               // onPress={alert("Are you sure you want to delete your account")}
-              onPress={() => props.navigation.navigate('AccountDeletion')}
+              onPress={() => setIsSupportView(!isSupportView)}
               left={() => (
                 <View
                   style={{
@@ -423,6 +423,84 @@ const SideMenu = props => {
                 </View>
               )}
             />
+            {isSupportView && 
+            <><Divider /><List.Item
+                // onPress={alert("Are you sure you want to delete your account")}
+                onPress={() => props.navigation.navigate('AccountDeletion')}
+                left={() => (
+                  <View
+                    style={{
+                      borderwidth: 0.2,
+                      height: 36,
+                      width: 36,
+                      borderRadius: 18,
+                      //backgroundColor: 'rgba(242, 242, 247, 255)',
+                      alignSelf: 'center',
+                      justifyContent: 'center',
+                      marginRight: 3,
+                    }}>
+
+                  </View>
+                )}
+                title="Live Chat"
+                titleStyle={{
+                  color: '#000',
+                  fontWeigt: '400',
+                  fontFamily: 'Poppins-Medium',
+                  fontSize: 13,
+                  lineHeight: 18,
+                }} /><Divider /><List.Item
+                  // onPress={alert("Are you sure you want to delete your account")}
+                  onPress={() => props.navigation.navigate('AccountDeletion')}
+                  left={() => (
+                    <View
+                      style={{
+                        borderwidth: 0.2,
+                        height: 36,
+                        width: 36,
+                        borderRadius: 18,
+                        //backgroundColor: 'rgba(242, 242, 247, 255)',
+                        alignSelf: 'center',
+                        justifyContent: 'center',
+                        marginRight: 3,
+                      }}>
+
+                    </View>
+                  )}
+                  title="FAQs"
+                  titleStyle={{
+                    color: '#000',
+                    fontWeigt: '400',
+                    fontFamily: 'Poppins-Medium',
+                    fontSize: 13,
+                    lineHeight: 18,
+                  }} /><Divider /><List.Item
+                  // onPress={alert("Are you sure you want to delete your account")}
+                  onPress={() => props.navigation.navigate('AccountDeletion')}
+                  left={() => (
+                    <View
+                      style={{
+                        borderwidth: 0.2,
+                        height: 36,
+                        width: 36,
+                        borderRadius: 18,
+                        //backgroundColor: 'rgba(242, 242, 247, 255)',
+                        alignSelf: 'center',
+                        justifyContent: 'center',
+                        marginRight: 3,
+                      }}>
+
+                    </View>
+                  )}
+                  title="E Mail"
+                  titleStyle={{
+                    color: '#000',
+                    fontWeigt: '400',
+                    fontFamily: 'Poppins-Medium',
+                    fontSize: 13,
+                    lineHeight: 18,
+                  }} /></>
+            }
             <Divider />
             <List.Item
               onPress={disabled ? () => _LogoutTriggr() : null}
@@ -444,8 +522,6 @@ const SideMenu = props => {
                     style={{
                       height: 18,
                       width: 18,
-                      // borderRadius: 30,
-                      // marginTop: 15,
                       marginHorizontal: 5,
                       alignSelf: 'center',
                     }}

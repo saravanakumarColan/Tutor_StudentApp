@@ -46,72 +46,73 @@ function TutorResultScreen(props) {
         paddingHorizontal: 10,
       }}
     >
-      <Image
-        source={{
-          uri: "https://ui-avatars.com/api/?length=1&background=2F79EB&color=fff&name=saravana",
-        }}
-        style={{
-          width: 55,
-          height: 55,
-          borderRadius: 50,
-          top: 0,
-        }}
-      />
       <View
         style={{
-          //flexDirection: "row",
-          width: 150,
-          height: 150,
-          //borderRadius: cborderRadius,
+          width: 190,
+          height: 160,
+          overflow: "hidden",
+          borderRadius: 10,marginVertical:5
         }}
       >
-        <LinearGradient
-          colors={["#10719E", "#199ECF", "#20C6F9"]}
-          start={{ x: 0.1, y: 1 }}
-          end={{ x: 0.8, y: 0.9 }}
+        <View
           style={{
-            flex: 1,
+            width: 40,
+            height: 30,
+            overflow: "hidden",
+            borderRadius: 10,
           }}
+        ></View>
+        <View
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+            paddingVertical: 10,
+            backgroundColor: "#199ECF",
+            overflow: "hidden",
+            borderTopStartRadius:10,
+            borderTopEndRadius:10
+
+          }}
+        >
+          <View style={{ flexDirection: "column", justifyContent: "center",marginTop:15 }}>
+            <Text
+              style={{
+                color: "#fff",
+                fontSize: 14,
+                textAlign: "center",
+                fontFamily: "Poppins-SemiBold",
+                lineHeight: 20,
+                paddingTop: 5,
+              }}
+            >
+              {"Full name"}
+            </Text>
+            <Text
+              style={{
+                color: "#fff",
+                fontSize: 14,
+                textAlign: "center",
+                fontFamily: "Poppins-Medium",
+                paddingTop: 2,
+              }}
+            >
+              {"English"}
+            </Text>
+            <View
+              style={{
+                height: 0.4,
+                backgroundColor: "#fff",
+                width: 150,
+                marginTop: 5,
+              }}
+            />
+          </View>
+        </View>
+        <View
+          style={{ flex: 1, flexDirection: "row", backgroundColor: "#199ECF" }}
         >
           <View
             style={{
-              justifyContent: "center",
-              alignItems: "center",
-              paddingVertical: 10,
-            }}
-          >
-            <View style={{ flexDirection: "column", justifyContent: "center" }}>
-              <Text
-                style={{
-                  color: "#fff",
-                  fontSize: 14,
-                  textAlign: "center",
-                  fontFamily: "Poppins-SemiBold",
-                  lineHeight: 20,
-                  paddingTop: 5,
-                }}
-              >
-                {"Full name"}
-              </Text>
-              <Text
-                style={{
-                  color: "#fff",
-                  fontSize: 14,
-                  textAlign: "center",
-                  fontFamily: "Poppins-Medium",
-                  paddingTop: 2,
-                }}
-              >
-                {"English"}
-              </Text>
-              <View
-                style={{ height: 0.5, backgroundColor: "#fff", width: 150 }}
-              />
-            </View>
-          </View>
-          <View style={{flex:1,flexDirection:'row'}}>
-          <View
-            style={{
               flex: 1,
               justifyContent: "center",
               alignItems: "center",
@@ -167,10 +168,29 @@ function TutorResultScreen(props) {
               {"20"}
             </Text>
           </View>
-          </View>
-        </LinearGradient>
+        </View>
+        {/* </LinearGradient> */}
       </View>
-     
+      <View
+        style={{
+          position: "absolute",
+          left: 75,
+          top: -1,
+        }}
+      >
+        <Image
+          source={{
+            uri: "https://ui-avatars.com/api/?length=1&background=2F79EB&color=fff&name=saravana",
+          }}
+          style={{
+            width: 60,
+            height: 60,
+            borderRadius: 50,
+            borderWidth: 1,
+            borderColor: "#fff",
+          }}
+        />
+      </View>
     </View>
   );
   return (
@@ -209,8 +229,6 @@ function TutorResultScreen(props) {
             keyExtractor={(item) => item.id}
           />
         </View>
-
-     
       </ScrollView>
     </View>
   );

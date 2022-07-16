@@ -22,6 +22,7 @@ import {useDispatch, useSelector} from 'react-redux';
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 // import {Divider} from 'react-native-paper';
+
 function InitialLoadingScreen(props) {
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
@@ -40,7 +41,11 @@ function InitialLoadingScreen(props) {
     // } else {
     //   props.navigation.dispatch(StackActions.replace('AuthStack'));
     // }
-   props.navigation.dispatch(StackActions.replace('AuthStack'));
+    setTimeout(()=>{
+      props.navigation.dispatch(StackActions.replace('AuthStack'));
+    
+    }, 2000); 
+
 
   };
   
