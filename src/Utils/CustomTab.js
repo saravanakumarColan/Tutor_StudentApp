@@ -1,42 +1,53 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {View, Image, StyleSheet} from 'react-native';
-import * as React from 'react';
-import {useTheme} from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { View, Image, StyleSheet } from "react-native";
+import * as React from "react";
+import { useTheme } from "@react-navigation/native";
+import Icon from "react-native-vector-icons/MaterialIcons";
 // import FastImage from 'react-native-fast-image';
 
-import {My_Home_Tab, My_club_Tab} from '../RootNavigation'
-import ChatScreen from '../Screens/ChatScreens/ChatScreen';
-import ProfileScreen from '../Screens/ProfileScreens/ProfileScreen';
+import { My_Home_Tab, My_club_Tab } from "../RootNavigation";
+import ChatScreen from "../Screens/ChatScreens/ChatScreen";
+import ProfileScreen from "../Screens/ProfileScreens/ProfileScreen";
 const Tab = createBottomTabNavigator();
 // import ProfileScreen from "../Screens/ProfileScreen";
 export const CustomTab = () => {
-  const {colors} = useTheme();
+  const { colors } = useTheme();
 
   return (
     <Tab.Navigator
-      ScreenOptions={{
+      screenOptions={{
         activeTintColor: colors.primary,
         inactiveTintColor: colors.sublabelTextColor,
         showLabel: true,
         headerShown: false,
+        tabBarItemStyle: { width: "100", top: 5, padding: 5 },
         tabBarStyle: {
-          position: 'absolute',
-          borderTopWidth: 1,
-          
-          
+          paddingBottom: 5,
+          borderColor: "#199ECF",
+          borderRadius: 23,
+          left: 10,
+          width: "95%",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "absolute",
+          height: 55,
+          borderTopWidth: 0.5,
+          borderTopColor: "#199ECF",
+          borderWidth: 0.5,
+          shadowColor: "#199ECF",
+          elevation: 1,
         },
       }}
-      initialRouteName="Home">
+      initialRouteName="Home"
+    >
       <Tab.Screen
         name="Home"
         component={My_Home_Tab}
         options={{
-          tabBarStyle: {height: 50, paddingBottom: 5},
-          tabBarLabelStyle: {fontFamily: 'Poppins-SemiBold'},
+          tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
           headerShown: false,
-          tabBarIcon: ({color, size, focused}) => (
-            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+          tabBarIcon: ({ color, size, focused }) => (
+            <View style={{ justifyContent: "center", alignItems: "center" }}>
               {/* <View
                 style={
                   focused
@@ -71,11 +82,10 @@ export const CustomTab = () => {
         name="Club"
         component={My_club_Tab}
         options={{
-          tabBarStyle: {height: 50, paddingBottom: 5},
-          tabBarLabelStyle: {fontFamily: 'Poppins-SemiBold'},
+          tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
           headerShown: false,
-          tabBarIcon: ({color, size, focused}) => (
-            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+          tabBarIcon: ({ color, size, focused }) => (
+            <View style={{ justifyContent: "center", alignItems: "center" }}>
               {/* <View
                 style={
                   focused
@@ -110,11 +120,10 @@ export const CustomTab = () => {
         name="Chat"
         component={ChatScreen}
         options={{
-          tabBarStyle: {height: 50, paddingBottom: 5},
           headerShown: false,
-          tabBarLabelStyle: {fontFamily: 'Poppins-SemiBold'},
-          tabBarIcon: ({color, size, focused}) => (
-            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+          tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
+          tabBarIcon: ({ color, size, focused }) => (
+            <View style={{ justifyContent: "center", alignItems: "center" }}>
               <View
                 style={
                   focused
@@ -142,7 +151,8 @@ export const CustomTab = () => {
         component={ProfileScreen}
         options={{
           headerShown: false,
-          tabBarIcon: ({color, size, focused}) => (
+
+          tabBarIcon: ({ color, size, focused }) => (
             <View>
               <Icon
                 name="forum"
@@ -159,36 +169,36 @@ export const CustomTab = () => {
 const styles = StyleSheet.create({
   circle: {
     marginBottom: 20,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     width: 70,
     height: 70,
 
     borderRadius: 35,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     elevation: 10,
-    shadowColor: 'gray',
-    shadowOffset: {width: 0, height: 1},
+    shadowColor: "gray",
+    shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.8,
     shadowRadius: 15,
     marginBottom: 30,
   },
   Innercircle: {
     elevation: 10,
-    shadowColor: 'gray',
-    shadowOffset: {width: 0, height: 1},
+    shadowColor: "gray",
+    shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.8,
     shadowRadius: 15,
     width: 65,
     height: 65,
     borderRadius: 65 / 2,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   ImgStyle: {
     width: 25,
-    tintColor: '#fff',
+    tintColor: "#fff",
     height: 25,
-    resizeMode: 'contain',
+    resizeMode: "contain",
   },
 });

@@ -4,7 +4,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 KeyboardAwareScrollView
 function HomeContainer(props) {
   return (
-  <View style={{flex:1}}>
+  <View style={{flex:1,backgroundColor:'#fefefe',shadowOpacity:2}}>
     <KeyboardAwareScrollView >
     {props.children}
     </KeyboardAwareScrollView>

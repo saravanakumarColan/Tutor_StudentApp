@@ -24,7 +24,7 @@ import ActiveSessionScreen from '../Screens/FindTutorScreens/Session/ActiveSessi
 import NotificationList from '../Screens/NotificationScreen/NotificationList';
 import SettingScreen from '../Screens/NotificationScreen/SettingsScreen';
 import PastSessionScreen from '../Screens/FindTutorScreens/Session/PastSessionScreen';
-
+import EmailScreens from '../Screens/EmailScreens/EmailScreens';
 // Before rendering any navigation stack
 
 const Stack = createStackNavigator();
@@ -47,6 +47,7 @@ export default function App() {
 
 
   const beforeLoggedIn = {
+   
     StartScreen:StartScreen,
     SignupScreen:SignupScreen,
     LoginScreen: LoginScreen,
@@ -62,6 +63,8 @@ export default function App() {
     NotificationList:NotificationList,
     SettingScreen:SettingScreen,
     PastSessionScreen:PastSessionScreen,
+    EmailScreens:EmailScreens,
+    
   };
   function AuthStack() {
     return (

@@ -7,6 +7,6 @@ export const icons = {
     pdf:require("./pdf.png"),
     doc:require("./doc.png"),
     backArrow:require("./backArrow.png"),
-    star:require("./star.png")
-
+    star:require("./star.png"),
+    add:require("./add.png"),
 }
