@@ -23,7 +23,7 @@ function InputText(props) {
         <View style={{ flex: 0.85, padding: 5 }}>
           <TextInput
           {...props}
-           style={{ flex: 1,fontSize:20 }} />
+           style={{ flex: 1,fontSize:20 ,padding:0}} />
         </View>
       </View>
       <View style={{ flex: 0.1 }} />

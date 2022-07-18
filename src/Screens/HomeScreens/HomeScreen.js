@@ -15,9 +15,9 @@ function HomeScreen(props) {
     <View style={styles.Container}>
       <Header {...props}/>
       <Image
-          source={require("../../Assets/icons/teacher.jpg")}
-          style={{ width: "100%", height: 250 }}
-          resizeMode={"cover"}
+          source={require("../../Assets/images/dashboard.png")}
+          style={{ width: "100%", height: "20%",resizeMode:'contain',top:View_Spacing.VS_W1}}
+          
         />
       <TouchableOpacity
         style={{ backgroundColor: "#fff" }}

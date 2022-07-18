@@ -1,10 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import HomeContainer from "../../Components/HomeContainer";
 import {
   View_Spacing,
   fontSize,
   LG_BG_THEME,
+  height,
 } from "../../Assets/Constant/fontsAndColors";
 import Button from "../../Components/Button";
 
@@ -14,21 +15,34 @@ function StartScreen(props) {
   return (
     <HomeContainer>
       {/* image */}
-
-      <View style={{ height: View_Spacing.VS_W20, backgroundColor: "red" }} />
+      <View style={{ flex: 1, height: (height / 100) * 40 }}>
+        <Image
+          style={{ height: "100%", width: "100%", resizeMode: "contain" }}
+          source={require("../../Assets/images/start.png")}
+        />
+      </View>
       {/* Label */}
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View style={{ height: View_Spacing.VS_W2 }} />
+
+      <View
+        style={{
+          flex: 1,
+          height: "20%",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Text
           style={{
             fontSize: fontSize.ExtraLarge,
             color: LG_BG_THEME.App_Text_Blue,
           }}
         >
-          {"Let's get Started"}
+          {"Let's get Started!"}
         </Text>
       </View>
 
-      <View style={{ height: View_Spacing.VS_W4 }} />
+      <View style={{ height: View_Spacing.VS_W5 }} />
 
       <Button
         textStyle={{
@@ -39,8 +53,11 @@ function StartScreen(props) {
         onPress={() => props.navigation.navigate("SignupScreen")}
         name="Sign up"
       />
+
       <View style={{ height: View_Spacing.VS_W4 }} />
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View
+        style={{ flex: 0.2, justifyContent: "center", alignItems: "center" }}
+      >
         <TouchableOpacity
           onPress={() => props.navigation.navigate("LoginScreen")}
         >
@@ -62,7 +79,7 @@ function StartScreen(props) {
             </Text>
           </Text>
         </TouchableOpacity>
-        <View style={{ height: View_Spacing.VS_W10 }} />
+        <View style={{ height: View_Spacing.VS_W15 }} />
         <Text
           style={{
             fontSize: fontSize.Medium,

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity ,Image} from "react-native";
 import HomeContainer from "../../Components/HomeContainer";
 import {
   View_Spacing,
@@ -8,9 +8,10 @@ import {
 } from "../../Assets/Constant/fontsAndColors";
 import Button from "../../Components/Button";
 import { icons } from "../../Assets/icons";
+import Header from "../../Components/Header";
 import InputText from "../../Components/InputText";
 
-function SignupScreen() {
+function SignupScreen(props) {
   const [reg_Details, setRegister] = React.useState({
     firstname: "",
     lastName: "",
@@ -29,8 +30,12 @@ function SignupScreen() {
   return (
     <HomeContainer>
       {/* image */}
-
-      <View style={{ height: View_Spacing.VS_W20, backgroundColor: "red" }} />
+      <Header {...props} back={true} />
+      <Image
+        style={{ height: "35%", width: "100%", resizeMode: "contain" ,}}
+        source={require("../../Assets/images/register.png")}
+      />
+      
       {/* Label */}
 
       <View style={styles.sub_container}>
@@ -45,7 +50,7 @@ function SignupScreen() {
         </Text>
       </View>
 
-      <View style={{ height: View_Spacing.VS_W4 }} />
+      
 
       {/* Textinput */}
       {Object.keys(reg_Details).map((e,i) => {

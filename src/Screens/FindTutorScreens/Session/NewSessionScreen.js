@@ -65,8 +65,9 @@ function NewSessionScreen(props) {
               }}
             >
               <TextInput
+              
                 keyboardType="numeric"
-                style={{ height: View_Spacing.VS_W4 }}
+                style={{ height: View_Spacing.VS_W4 ,padding:0}}
                 placeholder="00.00"
               />
             </View>

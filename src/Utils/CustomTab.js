@@ -8,6 +8,7 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 import { My_Home_Tab, My_club_Tab } from "../RootNavigation";
 import ChatScreen from "../Screens/ChatScreens/ChatScreen";
 import ProfileScreen from "../Screens/ProfileScreens/ProfileScreen";
+import HomeScreen from "../Screens/HomeScreens/HomeScreen";
 const Tab = createBottomTabNavigator();
 // import ProfileScreen from "../Screens/ProfileScreen";
 export const CustomTab = () => {
@@ -20,7 +21,7 @@ export const CustomTab = () => {
         inactiveTintColor: colors.sublabelTextColor,
         showLabel: true,
         headerShown: false,
-        tabBarItemStyle: { width: "100", top: 5, padding: 5 },
+        tabBarItemStyle: { width: 100, top: 5, padding: 5 },
         tabBarStyle: {
           paddingBottom: 5,
           borderColor: "#199ECF",
@@ -42,7 +43,7 @@ export const CustomTab = () => {
     >
       <Tab.Screen
         name="Home"
-        component={My_Home_Tab}
+        component={HomeScreen}
         options={{
           tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
           headerShown: false,

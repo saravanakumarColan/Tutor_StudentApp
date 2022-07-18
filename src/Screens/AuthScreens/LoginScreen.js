@@ -18,7 +18,7 @@ import Button from "../../Components/Button";
 import { icons } from "../../Assets/icons";
 
 import { StackActions,} from "@react-navigation/native";
-import { View_Spacing,fontSize,LG_BG_THEME } from "../../Assets/Constant/fontsAndColors";
+import { View_Spacing,fontSize,LG_BG_THEME ,height} from "../../Assets/Constant/fontsAndColors";
 
 function LoginScreen(props) {
   const { colors } = useTheme();
@@ -65,8 +65,12 @@ function LoginScreen(props) {
   return (
     <HomeComtainer>
       {/* image */}
-
-      <View style={{ height: View_Spacing.VS_W20, backgroundColor: "red" }} />
+      <View style={{ flex: 1, height: (height / 100) * 30 ,}}>
+      <Image
+        style={{ height: "100%", width: "100%", resizeMode: "contain", }}
+        source={require("../../Assets/images/login.png")}
+      />
+ </View>
       {/* Label */}
 
       <View style={styles.sub_container}>
@@ -74,7 +78,7 @@ function LoginScreen(props) {
         <Text style={{ fontSize: fontSize.ExtraLarge ,color:LG_BG_THEME.App_Text_Blue}}>{"Sign In"}</Text>
       </View>
 
-      <View style={{ height: View_Spacing.VS_W8 }} />
+      <View style={{ height: View_Spacing.VS_W5 }} />
 
       {/* Textinput */}
       <View style={styles.sub_container}>
@@ -122,6 +126,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
-  sub_container: { flex: 0.1, justifyContent: "center", alignItems: "center" },
+  sub_container: { flex: 0.1, justifyContent: "center", alignItems: "center" ,},
 });
 export default LoginScreen;

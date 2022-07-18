@@ -451,7 +451,9 @@ const SideMenu = props => {
                   lineHeight: 18,
                 }} /><Divider /><List.Item
                   // onPress={alert("Are you sure you want to delete your account")}
-                  onPress={() => props.navigation.navigate('AccountDeletion')}
+                  onPress={() => props.navigation.navigate('EmailScreens',{
+                    email: "faq",
+                  })}
                   left={() => (
                     <View
                       style={{
@@ -476,7 +478,9 @@ const SideMenu = props => {
                     lineHeight: 18,
                   }} /><Divider /><List.Item
                   // onPress={alert("Are you sure you want to delete your account")}
-                  onPress={() => props.navigation.navigate('AccountDeletion')}
+                  onPress={() => props.navigation.navigate('EmailScreens',{
+                    email: "email",
+                  })}
                   left={() => (
                     <View
                       style={{

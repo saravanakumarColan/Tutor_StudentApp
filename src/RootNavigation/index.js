@@ -59,7 +59,7 @@ export default function App() {
     MyTabs: CustomTab,
   };
   const tabsInner = {
-    TutorResultScreen : TutorResultScreen,
+     TutorResultScreen : TutorResultScreen,
     ActiveSessionScreen:ActiveSessionScreen,
     FindTutorScreen:FindTutorScreen,
     NotificationList:NotificationList,
@@ -120,8 +120,8 @@ export default function App() {
 
 const My_Home_Tab = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Navigator  screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Home" component={PastSessionScreen} /> 
     </Stack.Navigator>
   );
 };

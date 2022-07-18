@@ -24,10 +24,12 @@ import Button from "../../Components/Button";
 
 export default function EmailScreens(props) {
   const height = Dimensions.get("screen").height;
-  const { Email, FAQ } = props;
+
+  const Email = props.route.params
+console.log("Email==>",Email.eamil)
   return (
     <HomeContainer>
-      {Email ? (
+      {Email?.email==="email"? (
         <>
           <Header title={"E Mail"} back={true} {...props} />
           <View style={{ flex: 1, padding: 8 }}>
