@@ -253,12 +253,8 @@ const SideMenu = props => {
            
               <List.Item
                 onPress={() => {
-                  //setPrivacyPolicy(!privacyPolicy)
-                  props.navigation.navigate('WebViewScreen', {
-                    WebViewLink: 'https://kridasport.com/how-to',
-                    isarticle: true,
-                    terms: ' ',
-                  });
+                  props.navigation.navigate('PaymentScreens')
+                 
                 }}
                 left={() => (
                   <View

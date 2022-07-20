@@ -10,5 +10,8 @@ export const icons = {
     star:require("./star.png"),
     add:require("./add.png"),
     bell:require("./bell.png"),
-    menu:require("./menu.png")
+    menu:require("./menu.png"),
+    home_lite:require("./home_lite.png"),
+    profile:require("./profile.png"),
+    chat_lite:require("./chat_lite.png"),
 }

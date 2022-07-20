@@ -11,6 +11,7 @@ import ProfileScreen from "../Screens/ProfileScreens/ProfileScreen";
 import HomeScreen from "../Screens/HomeScreens/HomeScreen";
 const Tab = createBottomTabNavigator();
 // import ProfileScreen from "../Screens/ProfileScreen";
+import { icons } from "../Assets/icons";
 export const CustomTab = () => {
   const { colors } = useTheme();
 
@@ -64,11 +65,7 @@ export const CustomTab = () => {
                     : null
                 }
               /> */}
-              <Icon
-                name="home"
-                size={22}
-                color={focused ? colors.primary : colors.sublabelTextColor}
-              />
+             <Image source={icons.home_lite} style={{height:20,width:20}} />
               {/* <FastImage
                 resizeMode={'contain'}
                 tintColor={focused ? colors.primary : colors.sublabelTextColor}
@@ -80,7 +77,7 @@ export const CustomTab = () => {
         }}
       />
       <Tab.Screen
-        name="Club"
+        name="Find a Tutor"
         component={My_club_Tab}
         options={{
           tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
@@ -104,7 +101,7 @@ export const CustomTab = () => {
               <Icon
                 name="home"
                 size={22}
-                color={focused ? colors.primary : colors.sublabelTextColor}
+                color={colors.sublabelTextColor}
               />
               {/* <FastImage
                 resizeMode={'contain'}
@@ -125,24 +122,8 @@ export const CustomTab = () => {
           tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
           tabBarIcon: ({ color, size, focused }) => (
             <View style={{ justifyContent: "center", alignItems: "center" }}>
-              <View
-                style={
-                  focused
-                    ? {
-                        backgroundColor: colors.primary,
-                        height: 2,
-                        width: 40,
-                        borderRadius: 2,
-                        top: -3,
-                      }
-                    : null
-                }
-              />
-              <Icon
-                name="account-balance-wallet"
-                size={22}
-                color={focused ? colors.primary : colors.sublabelTextColor}
-              />
+              
+              <Image source={icons.chat_lite} style={{height:20,width:20}} />
             </View>
           ),
         }}
@@ -155,11 +136,7 @@ export const CustomTab = () => {
 
           tabBarIcon: ({ color, size, focused }) => (
             <View>
-              <Icon
-                name="forum"
-                size={25}
-                color={focused ? colors.primary : colors.sublabelTextColor}
-              />
+              <Image source={icons.profile} style={{height:20,width:20}} />
             </View>
           ),
         }}
