@@ -83,7 +83,7 @@ export const CustomTab = () => {
           tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
           headerShown: false,
           tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ justifyContent: "center", alignItems: "center" }}>
+            <View style={{ justifyContent: "center", alignItems: "center", }}>
               {/* <View
                 style={
                   focused
