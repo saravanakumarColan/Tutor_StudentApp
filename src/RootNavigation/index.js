@@ -27,6 +27,8 @@ import PastSessionScreen from '../Screens/FindTutorScreens/Session/PastSessionSc
 import EmailScreens from '../Screens/EmailScreens/EmailScreens';
 import ComplaintsList from '../Screens/NotificationScreen/ComplaintsList';
 import PaymentScreens from '../Screens/PaymentScreens/PaymentScreens';
+import TutorProfile from '../Screens/ProfileScreens/TutorProfile';
+
 // Before rendering any navigation stack
 
 const Stack = createStackNavigator();
@@ -67,7 +69,8 @@ export default function App() {
     PastSessionScreen:PastSessionScreen,
     EmailScreens:EmailScreens,
     PaymentScreens:PaymentScreens,
-    ComplaintsList:ComplaintsList
+    ComplaintsList:ComplaintsList,
+    TutorProfile:TutorProfile
   };
   function AuthStack() {
     return (

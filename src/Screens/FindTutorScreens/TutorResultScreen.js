@@ -39,6 +39,7 @@ function TutorResultScreen(props) {
     },
   ];
   const renderItem = ({ item }) => (
+    <TouchableOpacity onPress={()=>{props.navigation.navigate('TutorProfile')}}>
     <View
       style={{
         justifyContent: "center",
@@ -192,6 +193,7 @@ function TutorResultScreen(props) {
         />
       </View>
     </View>
+    </TouchableOpacity>
   );
   return (
     <View style={styles.Container}>
